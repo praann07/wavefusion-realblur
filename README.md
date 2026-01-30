@@ -6,7 +6,7 @@ This repository contains the implementation of WaveFusion-Net trained on the **R
 
 ---
 
-## 📊 Results
+##  Results
 
 | Metric | Value |
 |--------|-------|
@@ -28,10 +28,10 @@ This repository contains the implementation of WaveFusion-Net trained on the **R
 | **WaveFusion-Net** | (training) | 29.63 | **9.48M** ⭐ |
 
 **Key Highlights:**
-- ✅ **45% smaller** than NAFNet (9.48M vs 17.1M parameters)
-- ✅ Real camera blur generalization demonstrated
-- ✅ Cross-dataset training capability
-- ✅ Under-12-hour training time
+-  **45% smaller** than NAFNet (9.48M vs 17.1M parameters)
+-  Real camera blur generalization demonstrated
+-  Cross-dataset training capability
+-  Under-12-hour training time
 
 ---
 
@@ -47,7 +47,7 @@ This makes it the gold standard for evaluating deblurring models for production 
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 WaveFusion-Net combines spatial and frequency-domain processing:
 
@@ -79,7 +79,7 @@ Total Loss = 1.0 * L1 + 0.1 * VGG + 0.05 * FFT + 0.1 * Gradient + 0.02 * Wavelet
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 ```bash
@@ -144,7 +144,7 @@ sharp_img.save('deblurred.png')
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 REALBLUR_J/
@@ -161,7 +161,7 @@ REALBLUR_J/
 
 ---
 
-## 📈 Training Progress
+##  Training Progress
 
 | Epoch | Loss | PSNR (dB) | SSIM | Notes |
 |-------|------|-----------|------|-------|
@@ -187,7 +187,7 @@ REALBLUR_J/
 
 ---
 
-## 🖼️ Visual Results
+## Visual Results
 
 The repository includes comparison images showing:
 - **Blur Input**: Original blurred photograph
@@ -201,7 +201,7 @@ Example results demonstrate:
 
 ---
 
-## 🔬 Technical Details
+## Technical Details
 
 ### Dataset Loader Features
 - Direct blur/gt folder mapping
@@ -223,7 +223,7 @@ Final: 1e-7 (at epoch 100)
 
 ---
 
-## 📊 Cross-Dataset Generalization
+## Cross-Dataset Generalization
 
 WaveFusion-Net demonstrates strong transfer learning:
 - Trained on synthetic blur (GoPro) → Tests on real blur (RealBlur-J)
@@ -232,7 +232,7 @@ WaveFusion-Net demonstrates strong transfer learning:
 
 ---
 
-## 🎯 Key Observations
+##  Key Observations
 
 1. **Convergence**: Reaches 29+ dB by epoch 50, saturates around epoch 90
 2. **Stability**: Combined loss prevents overfitting on real data
@@ -241,7 +241,7 @@ WaveFusion-Net demonstrates strong transfer learning:
 
 ---
 
-## 🚧 Performance Gap Analysis
+##  Performance Gap Analysis
 
 The ~6 dB gap vs NAFNet (35.90 dB) can be attributed to:
 - **Model capacity**: 9.48M vs 17.1M parameters
@@ -255,7 +255,7 @@ The ~6 dB gap vs NAFNet (35.90 dB) can be attributed to:
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - [ ] Extended training (200+ epochs) to close gap
 - [ ] Knowledge distillation from larger models
@@ -264,7 +264,7 @@ The ~6 dB gap vs NAFNet (35.90 dB) can be attributed to:
 
 ---
 
-## 📝 Citation
+## Citation
 
 If you use this work, please cite:
 ```bibtex
@@ -288,13 +288,11 @@ And the RealBlur dataset:
 
 ---
 
-## 📜 License
 
-This project is released under the MIT License.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - RealBlur-J dataset: [Rim et al., ECCV 2020](http://cg.postech.ac.kr/research/realblur/)
 - NAFNet baseline for architecture inspiration
@@ -302,23 +300,23 @@ This project is released under the MIT License.
 
 ---
 
-## 🔗 Related Repositories
+##  Related Repositories
 
 - [GoPro Training](../GOPRO/) – Synthetic blur benchmark
 - [HIDE Training](../HIDE/) – Real-world high-quality blur
 
 ---
 
-## 📧 Contact
+## Contact
 
 For questions, collaborations, or issues, please open a GitHub issue or reach out directly.
 
 ---
 
-## 🌟 Show Your Support
+##  Show Your Support
 
 If you find this work helpful:
-- ⭐ Star the repository
-- 🐛 Report issues or suggest improvements
-- 🔀 Fork and contribute your enhancements
-- 📢 Share with the community!
+-  Star the repository
+-  Report issues or suggest improvements
+-  Fork and contribute your enhancements
+-  Share with the community!
